@@ -17,41 +17,47 @@
 </head>
 
 <body class="body">
-  <form class="form js-form">
-    <fieldset class="form__fieldset">
-      <legend class="form__legend">Konwerter walut</legend>
+  <main>
+    <form class="form js-form">
+      <fieldset class="form__fieldset">
+        <legend class="form__legend">Konwerter walut</legend>
+        <p>
+          <label>
+            <span class="form__labelText">Podaj kwotę w PLN*:</span>
+            <input class="form__field js-amount" type="number" name="amount" min="1" step="any" required>
+          </label>
+        </p>
+        <p>
+          <label>
+            <span class="form__labelText">Wybierz walutę: </span>
+            <select class="form__field js-currency">
+              <option>USD</option>
+              <option>EUR</option>
+              <option>GBP</option>
+              <option>CHF</option>
+            </select>
+          </label>
+        </p>
+        <p>
+          <label>
+            <span class="form__labelText">Otrzymasz: </span>
+            <input class="form__field js-result" readonly>
+          </label>
+        </p>
+        <p>* pole obowiązkowe</p>
+      </fieldset>
       <p>
-        <label>
-          <span class="form__labelText">Podaj kwotę w PLN*:</span>
-          <input class="form__field js-amount" type="number" name="amount" min="1" step="any" required>
-        </label>
+        <button class="button">Przelicz</button>
       </p>
       <p>
-        <label>
-          <span class="form__labelText">Wbierz walutę: </span>
-          <select class="form__field js-currency">
-            <option>USD</option>
-            <option>EUR</option>
-            <option>GBP</option>
-            <option>CHF</option>
-          </select>
-        </label>
+        <button class="button" type="reset">Wyczyść formularz</button>
       </p>
-      <p>
-        <label>
-          <span class="form__labelText">Otrzymasz: </span>
-          <input class="form__field js-result" readonly>
-        </label>
-      </p>
-      <p>* pole obowiązkowe</p>
-    </fieldset>
-    <p>
-      <button class="button">Przelicz</button>
-    </p>
-    <p>
-      <button class="button" type="reset">Wyczyść formularz</button>
-    </p>
-  </form>
+    </form>
+  </main>
+  
+  <footer class="footer">
+    <p>Kursy średnie walut obcych pochodzą ze strony internetowej NBP.</p>
+  </footer>
 </body>
 
 </html>
